@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
     <head>
@@ -23,10 +23,31 @@
         <!-- innerhtml -->
         <p><button onclick="
     var x=document.getElementById('text');
-                x.innerHTML='innerhtml';">另一個
+                x.innerHTML='innerhtml';">innerHTML
                 </button>   
     </p>
         <p id="text"></p>
+        <!-- function -->
+        <script>
+            function myfunc() {
+                var y = document.getElementById('text2');
+                y.innerHTML = 'innerHTML by my function';
+            }
+        </script>
+        <button onclick="myfunc()">innerHTML by myfunction</button>
+            <p id="text2"></p>
+        <script>
+            function addBook() {
+                var list = document.getElementById('list');
+                var book = document.getElementById('book');
+                list.innerHTML += '<li>' + book.value + '</list>';
+            }
+        </script>
+        <p>
+        書名：<input id="book" type="text">
+        <button onclick="addBook()">新增</button>
+        </p>
+        <ul id="list"></ul>
 
     </body>
 </html>
