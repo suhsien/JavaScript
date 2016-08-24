@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello world</title>
+        <script>
+            //popup hello world window
+            alert("Hello world");
+            //prevent mouse right click
+            document.oncontextmenu = function () {
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Inline hello world-->
+       <p onclick="alert('Inline Hello World')"> Inline Hello world</p>
+        <!-- document.write-->
+        <script>document.write("documentwrite")</script>
+        <!-- button document write-->
+        <p></p><button onclick="document.write('new window')">button document write</button>
+        <!-- innerhtml -->
+        <p><button onclick="
+    var x=document.getElementById('text');
+                x.innerHTML='innerhtml';">另一個
+                </button>   
+    </p>
+        <p id="text"></p>
+
+    </body>
+</html>
